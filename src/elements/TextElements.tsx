@@ -18,9 +18,3 @@ export const Text = styled.Text`
   font-weight: bold;
   color: ${(props: Props) => props.theme.colors.text};
 `;
-
-export const ButtonText = styled.Text`
-  font-size: ${(props: Props) => (props.small ? '14px' : '16px')};
-  font-weight: bold;
-  color: ${(props: Props) => props.theme.colors.buttonText};
-`;

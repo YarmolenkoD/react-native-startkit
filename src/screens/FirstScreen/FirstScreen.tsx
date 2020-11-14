@@ -3,7 +3,8 @@ import * as React from 'react';
 
 import { RootStackParamList } from '../../../types';
 
-import { Title, Text, ViewWrapper, Button, ButtonText } from '../../elements';
+import Button from '../../components/Button/Button';
+import { Title, Text, ViewWrapper } from '../../elements';
 
 export default function NotFoundScreen(
   { navigation }: StackScreenProps<RootStackParamList, 'NotFound'>
@@ -17,10 +18,8 @@ export default function NotFoundScreen(
     <ViewWrapper>
       <Title>First Screen</Title>
       <Text>Some message about this screen</Text>
-      <Button>
-        <ButtonText>
-          Go to tabs
-        </ButtonText>
+      <Button onPress={next}>
+        Go to tabs
       </Button>
     </ViewWrapper>
   );
