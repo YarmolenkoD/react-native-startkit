@@ -1,4 +1,5 @@
 export type RootStackParamList = {
+  FirstScreen: undefined;
   Root: undefined;
   NotFound: undefined;
 };
