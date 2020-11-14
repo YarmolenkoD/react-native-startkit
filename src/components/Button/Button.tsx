@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Text } from './ButtonElements';
+import { ACTIVE_BUTTON_OPACITY } from '../../constants/Common';
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +9,7 @@ interface Props {
 
 export default ({ children, ...rest }: Props) => {
   return (
-    <Button {...rest}>
+    <Button activeOpacity={ACTIVE_BUTTON_OPACITY} {...rest}>
       <Text>{children}</Text>
     </Button>
   )

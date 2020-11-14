@@ -1,0 +1,1 @@
+export const ACTIVE_BUTTON_OPACITY = 0.8
