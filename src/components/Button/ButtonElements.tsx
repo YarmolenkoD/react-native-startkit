@@ -1,22 +1,32 @@
 import styled from 'styled-components/native';
-import { Theme } from '../../themes';
+import { DefaultTheme } from 'styled-components';
 
 interface Props {
-  small?: Theme;
-  theme: Theme;
+  theme: DefaultTheme;
+}
+
+interface TextProps extends Props {
+  small?: boolean;
+  dark?: boolean;
+  style?: {
+    background: string
+  };
 }
 
 export const Button = styled.TouchableOpacity`
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  padding: 10px 0;
-  border-radius: 8px;
-  background: ${(props: Props) => props.theme.colors.primary};
+  margin-bottom: 15px;
+  border-radius: ${(props: Props) => `${props.theme.borderRadius}px`};
+  overflow: hidden;
 `;
 
 export const Text = styled.Text`
-  font-size: ${(props: Props) => (props.small ? '14px' : '16px')};
+  font-size: ${(props: TextProps) => (props.small ? '14px' : '16px')};
   font-weight: bold;
-  color: ${(props: Props) => props.theme.colors.buttonText};
+  color: ${({ dark, theme }: TextProps) => {
+    if (dark) {
+      return theme.colors.darkButtonText
+    }
+    return theme.colors.buttonText
+  }};
 `;

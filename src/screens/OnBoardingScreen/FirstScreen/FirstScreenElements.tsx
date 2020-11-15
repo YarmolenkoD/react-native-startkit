@@ -1,7 +1,5 @@
 import styled from 'styled-components/native';
 
-const greenColor = '#1f9512';
-
 export const WrapperElement = styled.View`
   flex: 1;
   padding-top: 50px;

@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
-import { Theme } from '../../themes';
-import { ActivityIndicatorProps } from 'react-native';
+import { DefaultTheme } from 'styled-components';
 
 type Size = undefined | number |'small' | 'large';
 
 interface Props {
-  theme: Theme;
+  theme: DefaultTheme;
   size: Size;
 }
 
